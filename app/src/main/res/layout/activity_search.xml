@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".activity.SearchActivity">
+
+    <EditText
+        android:id="@+id/cari_iklan_edt"
+        android:inputType="textCapWords"
+        android:background="@drawable/edit_text_cari_iklan"
+        android:hint="@string/nama_iklan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_search_black_24dp"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:drawablePadding="15dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/iklan_recy"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v7.widget.RecyclerView>
+</LinearLayout>

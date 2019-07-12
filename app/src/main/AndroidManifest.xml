@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.perusdajepara.jeparaadvertiser">
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_jads_logo"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:roundIcon="@mipmap/ic_jads_logo_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <service android:name=".utils.DelayServices" />
+
+        <!-- Main Activity -->
+        <activity
+            android:name=".activity.MainActivity"
+            android:screenOrientation="portrait" />
+        <!-- Welcome Activity -->
+        <activity
+            android:name=".activity.WelcomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar" />
+        <!-- Peta -->
+        <activity
+            android:name=".mainmenu.PetaActivity"
+            android:parentActivityName=".mainmenu.PetaActivity"
+            android:screenOrientation="portrait" />
+        <!-- WebView Activity -->
+        <activity
+            android:name=".activity.WebViewActivity"
+            android:parentActivityName=".activity.WebViewActivity"
+            android:screenOrientation="portrait" />
+        <!-- Bookmark Activity -->
+        <activity
+            android:name=".mainmenu.BookmarkActivity"
+            android:parentActivityName=".mainmenu.BookmarkActivity"
+            android:screenOrientation="portrait" />
+        <!-- Statistik Activity -->
+        <activity
+            android:name=".mainmenu.StatistikActivity"
+            android:parentActivityName=".mainmenu.StatistikActivity"
+            android:screenOrientation="portrait" />
+        <!-- Info Iklan -->
+        <activity
+            android:name=".mainmenu.InfoIklanActivity"
+            android:parentActivityName=".mainmenu.InfoIklanActivity"
+            android:screenOrientation="portrait" />
+        <!-- Tentang Activity -->
+        <activity
+            android:name=".mainmenu.TentangActivity"
+            android:parentActivityName=".mainmenu.TentangActivity"
+            android:screenOrientation="portrait" />
+        <!-- Splashscreen -->
+        <activity
+            android:name=".activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!-- Scan Activity -->
+        <activity
+            android:name=".mainmenu.ScanActivity"
+            android:parentActivityName=".mainmenu.ScanActivity"
+            android:screenOrientation="portrait" />
+        <!-- Pilih Activity -->
+        <activity
+            android:name=".activity.PilihActivity"
+            android:parentActivityName=".activity.PilihActivity"
+            android:theme="@style/NoActionBar" />
+
+        <!-- Search Activity -->
+        <activity
+            android:name=".activity.SearchActivity"
+            android:parentActivityName=".activity.SearchActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.PengaturanActivity"/>
+    </application>
+
+</manifest>
